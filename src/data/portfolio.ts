@@ -102,7 +102,7 @@ export const PORTFOLIO_DATA = {
       tag: "Backend",
       description: "High-throughput microservices architecture with Redis caching, resilient rate limiting, and third-party integrations.",
       longDescription: "A robust backend system built to support real-time user workloads. Features automated database migrations, distributed Redis caching, webhook listeners, and zero-downtime CI/CD deployment pipelines.",
-      image: "/images/proj-backend.jpg",
+      image: "/images/proj-backend-apis.jpg",
       highlights: [
         "Sub-30ms p95 latency on read-heavy public endpoints with Redis caching",
         "Token bucket rate limiting to prevent API abuse and DDoS attacks",
