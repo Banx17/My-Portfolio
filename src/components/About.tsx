@@ -1,10 +1,39 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Sparkles, Server, Code2 } from "lucide-react";
-import { motion } from "framer-motion";
+import { Sparkles, Server, Code2, RefreshCw } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function About() {
+  const [activePhoto, setActivePhoto] = useState(0);
+
+  const aboutPhotos = [
+    {
+      src: "/images/about-photo-1.jpg",
+      alt: "Afeez Tomisin - Curiosity & Engineering",
+      caption: "Curiosity & Engineering",
+    },
+    {
+      src: "/images/about-photo-2.jpg",
+      alt: "Afeez Tomisin - Style & Technology",
+      caption: "Style & Technology",
+    },
+    {
+      src: "/images/about-photo-3.jpg",
+      alt: "Afeez Tomisin - Focus & Leisure",
+      caption: "Focus & Leisure",
+    },
+  ];
+
+  // Rotate images automatically every 4 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActivePhoto((prev) => (prev + 1) % aboutPhotos.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [aboutPhotos.length]);
+
   return (
     <section id="about" className="py-20 md:py-28 relative scroll-mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -41,32 +70,67 @@ export default function About() {
               </div>
               <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-xs text-neutral-300 font-medium">
                 <Server className="w-3.5 h-3.5 text-cyan-400" />
-                <span>Backend Developer (Node.js, Go, APIs)</span>
+                <span>Backend Developer (Node.js, Express, MongoDB)</span>
               </div>
             </div>
           </div>
 
-          {/* Right Image Column */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-              className="relative w-full max-w-sm h-80 sm:h-96 rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 shadow-2xl"
+          {/* Right Image Column: 3 Rotating Photos with 3D Flip / Crossfade */}
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-end">
+            <div
+              onClick={() => setActivePhoto((prev) => (prev + 1) % aboutPhotos.length)}
+              title="Click to see next photo"
+              className="relative w-full max-w-sm h-80 sm:h-96 rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 shadow-2xl group cursor-pointer select-none"
             >
-              <Image
-                src="/images/about-afeez.jpg"
-                alt="Afeez Adebayo in the field"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 400px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <span className="text-[11px] font-medium tracking-wide uppercase px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-neutral-700/80 text-neutral-300">
-                  Engineering &amp; Creation
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activePhoto}
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.96 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="relative w-full h-full"
+                >
+                  <Image
+                    src={aboutPhotos[activePhoto].src}
+                    alt={aboutPhotos[activePhoto].alt}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 400px"
+                  />
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+
+              {/* Bottom Caption Pill */}
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-neutral-300 pointer-events-none">
+                <span className="text-[11px] font-medium tracking-wide px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-neutral-700/80 text-neutral-200 flex items-center gap-1.5">
+                  <RefreshCw className="w-3 h-3 text-amber-400 animate-spin" style={{ animationDuration: "8s" }} />
+                  <span>{aboutPhotos[activePhoto].caption}</span>
                 </span>
+
+                {/* Dots indicator */}
+                <div className="flex items-center gap-1.5 pointer-events-auto">
+                  {aboutPhotos.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActivePhoto(idx);
+                      }}
+                      className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                        activePhoto === idx
+                          ? "w-4 bg-white"
+                          : "w-1.5 bg-neutral-600 hover:bg-neutral-400"
+                      }`}
+                      aria-label={`Go to photo ${idx + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -78,7 +142,7 @@ export default function About() {
             </div>
             <h3 className="text-base font-semibold text-white mb-1.5">Problem Solver</h3>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              I turn complex problems into simple solutions.
+              I turn complex problems into simple, human-centered digital solutions.
             </p>
           </div>
 
@@ -86,9 +150,9 @@ export default function About() {
             <div className="w-9 h-9 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-cyan-400 mb-4">
               <Server className="w-4 h-4" />
             </div>
-            <h3 className="text-base font-semibold text-white mb-1.5">Always Learning</h3>
+            <h3 className="text-base font-semibold text-white mb-1.5">Robust Backend</h3>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              I keep exploring new tools and ideas.
+              Engineering scalable server-side systems with distributed caching, microservice isolation, and high uptime.
             </p>
           </div>
 
@@ -96,9 +160,9 @@ export default function About() {
             <div className="w-9 h-9 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-purple-400 mb-4">
               <Code2 className="w-4 h-4" />
             </div>
-            <h3 className="text-base font-semibold text-white mb-1.5">User Focused</h3>
+            <h3 className="text-base font-semibold text-white mb-1.5">Clean Architecture</h3>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              I design and build with real people in mind.
+              Writing maintainable, well-documented code that engineers love working with and teams can scale quickly.
             </p>
           </div>
         </div>
@@ -106,4 +170,3 @@ export default function About() {
     </section>
   );
 }
-

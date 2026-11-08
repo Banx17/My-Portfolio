@@ -50,7 +50,3 @@
   width: max-content;
   animation: marquee 25s linear infinite;
 }
-
-.animate-marquee:hover {
-  animation-play-state: paused;
-}

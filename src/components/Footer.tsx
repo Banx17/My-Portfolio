@@ -11,7 +11,7 @@ import {
   GithubIcon,
   LinkedinIcon,
   TwitterIcon,
-  DribbbleIcon,
+  BehanceIcon,
 } from "./BrandIcons";
 
 interface FooterProps {
@@ -31,8 +31,8 @@ export default function Footer({ onOpenContact }: FooterProps) {
   const socials = [
     { name: "GitHub", url: "https://github.com/Banx17", icon: GithubIcon },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/afeez-tomisin-38140b21a", icon: LinkedinIcon },
-    { name: "Twitter / X", url: "https://twitter.com", icon: TwitterIcon },
-    { name: "Dribbble", url: "https://dribbble.com", icon: DribbbleIcon },
+    { name: "Twitter / X", url: "https://x.com/r_banx", icon: TwitterIcon },
+    { name: "Behance", url: "https://www.behance.net/afeez-tomisin", icon: BehanceIcon },
   ];
 
   return (

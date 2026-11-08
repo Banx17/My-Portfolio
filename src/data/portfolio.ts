@@ -36,8 +36,8 @@ export const PORTFOLIO_DATA = {
     socials: [
       { name: "GitHub", url: "https://github.com/Banx17", icon: "Github" },
       { name: "LinkedIn", url: "https://www.linkedin.com/in/afeez-tomisin-38140b21a", icon: "Linkedin" },
-      { name: "Twitter / X", url: "https://twitter.com", icon: "Twitter" },
-      { name: "Dribbble", url: "https://dribbble.com", icon: "Dribbble" },
+      { name: "Twitter / X", url: "https://x.com/r_banx", icon: "Twitter" },
+      { name: "Behance", url: "https://www.behance.net/afeez-tomisin", icon: "Behance" },
     ]
   },
   projects: [
@@ -84,7 +84,7 @@ export const PORTFOLIO_DATA = {
       tag: "Full Stack",
       description: "Gamified NFT platform and community reward ecosystem with vibrant collectible cards and interactive quests.",
       longDescription: "A playful yet high-utility Web3 gaming marketplace. Blends arcade-style visuals with Web3 wallet connection, NFT staking, and reward claiming leaderboards.",
-      image: "/images/proj-niwi.jpg",
+      image: "/images/proj-nim.jpg",
       highlights: [
         "Playful illustration style aligned with high-conversion e-commerce flows",
         "Real-time quest tracking and leaderboard micro-interactions",

@@ -26,6 +26,14 @@ export function TwitterIcon({ className = "w-4 h-4" }: { className?: string }) {
   );
 }
 
+export function BehanceIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-4.971 3-3.411 0-5.755-2.227-5.755-5.941 0-3.69 2.453-6.059 5.864-6.059 3.327 0 5.438 2.188 5.438 5.765 0 .547-.078 1.156-.078 1.156h-8.344c.094 1.766 1.406 2.75 3.031 2.75 1.547 0 2.469-.641 2.875-1.672h1.94zm-5.469-5.719c-.062-1.281-.984-2.047-2.266-2.047-1.391 0-2.313.828-2.484 2.047h4.75zm-11.257-6.281h5.812c1.781 0 3.047.453 3.828 1.344.688.797 1.047 1.844 1.047 3.031 0 1.562-.641 2.781-1.891 3.484 1.578.688 2.422 2.141 2.422 4.047 0 1.484-.469 2.75-1.375 3.719-.984 1.047-2.391 1.594-4.203 1.594h-5.641v-17.219zm2.844 6.781h2.5c1.422 0 2.297-.688 2.297-1.875 0-1.156-.844-1.828-2.297-1.828h-2.5v3.703zm0 7.375h2.828c1.641 0 2.656-.813 2.656-2.188 0-1.391-.984-2.219-2.656-2.219h-2.828v4.406z" />
+    </svg>
+  );
+}
+
 export function DribbbleIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
     <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -37,4 +45,3 @@ export function DribbbleIcon({ className = "w-4 h-4" }: { className?: string }) 
     </svg>
   );
 }
-

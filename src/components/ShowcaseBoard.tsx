@@ -65,7 +65,7 @@ export default function ShowcaseBoard({
       <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#080808] to-transparent z-10 pointer-events-none" />
 
       {/* Horizontal Moving Reel */}
-      <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused] w-max">
+      <div className="flex gap-6 animate-marquee w-max">
         {displayItems.map((item, index) => (
           <div
             key={`${item.id}-${index}`}
