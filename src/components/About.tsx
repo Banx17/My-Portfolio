@@ -18,18 +18,18 @@ export default function About() {
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-              Bridging intuitive design thinking with robust backend engineering.
+              Passionate about creating intuitive products and scalable systems.
             </h2>
 
             <div className="space-y-4 text-sm sm:text-base text-neutral-400 leading-relaxed">
               <p>
-                I&apos;m Afeez, a multidisciplinary Product Designer and Backend Engineer. I don&apos;t just design screens—I design systems. Understanding how frontend user interfaces communicate with backend services, data stores, and server infrastructure empowers me to create experiences that are both aesthetically delightful and technically sound.
+                Hi, I&apos;m Afeez Tomisin (Akinwunmi) — a Product Designer and Backend Developer passionate about creating meaningful digital experiences, solving problems and building the systems behind them.
               </p>
               <p>
-                My design philosophy centers on clarity and efficiency: stripping away friction until only what matters remains. I believe great products are born at the intersection of empathy for the user and pragmatic software engineering.
+                My interest in technology grew from seeing how everyday inventions, even something as simple as a bicycle, are created to solve problems. That curiosity eventually led me into tech, where I combine design and engineering using Figma, JavaScript, Node.js, Express and MongoDB to bring ideas to life.
               </p>
               <p>
-                When architecting backends, I focus on building high-performance, fault-tolerant APIs, optimizing database schemas, and creating resilient services that scale seamlessly under high traffic.
+                Outside work, I enjoy listening to music, reading, exploring fashion and personal styling, and keeping up with the ever-evolving world of technology. I&apos;m always eager to discover new ideas, learn new things and find inspiration in the world around me.
               </p>
             </div>
 
@@ -76,9 +76,9 @@ export default function About() {
             <div className="w-9 h-9 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-amber-400 mb-4">
               <Sparkles className="w-4 h-4" />
             </div>
-            <h3 className="text-base font-semibold text-white mb-1.5">Intuitive UI</h3>
+            <h3 className="text-base font-semibold text-white mb-1.5">Problem Solver</h3>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              Obsessed with user clarity, accessibility standards, and fluid tactile interactions that make products feel effortless.
+              I turn complex problems into simple solutions.
             </p>
           </div>
 
@@ -86,9 +86,9 @@ export default function About() {
             <div className="w-9 h-9 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-cyan-400 mb-4">
               <Server className="w-4 h-4" />
             </div>
-            <h3 className="text-base font-semibold text-white mb-1.5">Robust Backend</h3>
+            <h3 className="text-base font-semibold text-white mb-1.5">Always Learning</h3>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              Engineering scalable server-side systems with distributed caching, microservice isolation, and high uptime.
+              I keep exploring new tools and ideas.
             </p>
           </div>
 
@@ -96,9 +96,9 @@ export default function About() {
             <div className="w-9 h-9 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-purple-400 mb-4">
               <Code2 className="w-4 h-4" />
             </div>
-            <h3 className="text-base font-semibold text-white mb-1.5">Clean Architecture</h3>
+            <h3 className="text-base font-semibold text-white mb-1.5">User Focused</h3>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              Writing maintainable, well-documented, test-driven code that engineers love working with and teams can scale quickly.
+              I design and build with real people in mind.
             </p>
           </div>
         </div>

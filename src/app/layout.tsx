@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Afeez | Product Designer & Backend Engineer",
   description:
-    "Portfolio of Afeez Adebayo — Product Designer specializing in intuitive UI/UX design and Backend Engineer focused on building scalable, efficient, and reliable systems.",
+    "Portfolio of Afeez Tomisin — Product Designer specializing in intuitive UI/UX design and Backend Engineer focused on building scalable, efficient, and reliable systems.",
   keywords: [
     "Afeez",
-    "Afeez Adebayo",
+    "Afeez Tomisin",
     "Product Designer",
     "Backend Engineer",
     "UI/UX",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "Next.js",
     "Figma",
   ],
-  authors: [{ name: "Afeez Adebayo" }],
+  authors: [{ name: "Afeez Tomisin" }],
   openGraph: {
     title: "Afeez | Product Designer & Backend Engineer",
     description:

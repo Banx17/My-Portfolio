@@ -16,6 +16,11 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isContactOpen, setIsContactOpen] = useState(false);
 
+  const handleSelectProjectId = (id: string) => {
+    const proj = PORTFOLIO_DATA.projects.find((p) => p.id === id);
+    if (proj) setSelectedProject(proj);
+  };
+
   return (
     <div className="relative min-h-screen bg-[#080808] text-neutral-100 flex flex-col justify-between selection:bg-neutral-800 selection:text-white">
       {/* Top Navbar */}
@@ -23,7 +28,10 @@ export default function Home() {
 
       {/* Main Content Sections */}
       <main className="flex-1">
-        <Hero onOpenContact={() => setIsContactOpen(true)} />
+        <Hero
+          onOpenContact={() => setIsContactOpen(true)}
+          onSelectProject={handleSelectProjectId}
+        />
         <Projects
           projects={PORTFOLIO_DATA.projects}
           onSelectProject={(project) => setSelectedProject(project)}

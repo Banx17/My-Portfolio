@@ -20,7 +20,7 @@ interface FooterProps {
 
 export default function Footer({ onOpenContact }: FooterProps) {
   const [copied, setCopied] = useState(false);
-  const email = "afeezadebayo17@gmail.com";
+  const email = "afeezakinwunmi@gmail.com";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -29,8 +29,8 @@ export default function Footer({ onOpenContact }: FooterProps) {
   };
 
   const socials = [
-    { name: "GitHub", url: "https://github.com", icon: GithubIcon },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: LinkedinIcon },
+    { name: "GitHub", url: "https://github.com/Banx17", icon: GithubIcon },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/afeez-tomisin-38140b21a", icon: LinkedinIcon },
     { name: "Twitter / X", url: "https://twitter.com", icon: TwitterIcon },
     { name: "Dribbble", url: "https://dribbble.com", icon: DribbbleIcon },
   ];
@@ -130,7 +130,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
 
         {/* Bottom Credits */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
-          <p>© 2026 Afeez Adebayo. All rights reserved.</p>
+          <p>© 2026 Afeez Tomisin. All rights reserved.</p>
           <p className="flex items-center gap-1">
             <span>Designed &amp; Built with precision.</span>
           </p>

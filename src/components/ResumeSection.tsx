@@ -35,8 +35,8 @@ export default function ResumeSection() {
             </button>
 
             <a
-              href="/Afeez_Adebayo_Resume.pdf"
-              download="Afeez_Adebayo_Resume.pdf"
+              href="/Afeez_Tomisin_Resume.pdf"
+              download="Afeez_Tomisin_Resume.pdf"
               className="px-6 py-2.5 rounded-full text-xs font-semibold bg-white text-black hover:bg-neutral-200 transition-all flex items-center gap-2 shadow-lg shadow-white/10"
             >
               <Download className="w-4 h-4" />
@@ -53,7 +53,7 @@ export default function ResumeSection() {
             <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
               <div className="flex items-center gap-2">
                 <FileText className="w-5 h-5 text-amber-400" />
-                <h4 className="text-lg font-bold text-white">Afeez Adebayo — Curriculum Vitae</h4>
+                <h4 className="text-lg font-bold text-white">Afeez Tomisin — Curriculum Vitae</h4>
               </div>
               <button
                 onClick={() => setShowModal(false)}
@@ -103,8 +103,8 @@ export default function ResumeSection() {
 
             <div className="mt-8 pt-4 border-t border-neutral-800 flex justify-end gap-3">
               <a
-                href="/Afeez_Adebayo_Resume.pdf"
-                download="Afeez_Adebayo_Resume.pdf"
+                href="/Afeez_Tomisin_Resume.pdf"
+                download="Afeez_Tomisin_Resume.pdf"
                 className="px-5 py-2 rounded-full text-xs font-semibold bg-white text-black hover:bg-neutral-200 transition-colors flex items-center gap-1.5"
               >
                 <Download className="w-3.5 h-3.5" />

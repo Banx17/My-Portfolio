@@ -23,7 +23,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     // Direct mailto trigger fallback
     const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    window.location.href = `mailto:afeezadebayo17@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:afeezakinwunmi@gmail.com?subject=${subject}&body=${body}`;
 
     setSubmitted(true);
     setTimeout(() => {
@@ -122,7 +122,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </button>
 
             <p className="text-[11px] text-center text-neutral-500 pt-2">
-              Or email directly: <span className="text-neutral-300 font-mono">afeezadebayo17@gmail.com</span>
+              Or email directly: <span className="text-neutral-300 font-mono">afeezakinwunmi@gmail.com</span>
             </p>
           </form>
         )}

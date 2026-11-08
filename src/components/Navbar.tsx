@@ -30,23 +30,22 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#080808]/85 backdrop-blur-md border-b border-neutral-800/80 py-3 shadow-lg shadow-black/40"
-          : "bg-transparent py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
+        ? "bg-[#080808]/85 backdrop-blur-md border-b border-neutral-800/80 py-3 shadow-lg shadow-black/40"
+        : "bg-transparent py-5"
+        }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Brand / Avatar */}
         <a
           href="#"
           className="flex items-center gap-3 group"
-          aria-label="Afeez Adebayo Portfolio Home"
+          aria-label="Afeez Tomisin Portfolio Home"
         >
           <div className="relative w-10 h-10 rounded-full overflow-hidden border border-neutral-700 group-hover:border-neutral-400 transition-colors bg-neutral-900">
             <Image
               src="/images/hero-afeez.jpg"
-              alt="Afeez Adebayo"
+              alt="Afeez Tomisin"
               fill
               className="object-cover"
               sizes="40px"
