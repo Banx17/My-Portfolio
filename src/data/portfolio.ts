@@ -29,7 +29,7 @@ export const PORTFOLIO_DATA = {
     availableForWork: true,
     bio: "I'm a Product Designer specializing in intuitive UI/UX design and a Backend Engineer focused on building scalable, efficient, and reliable systems.",
     aboutParagraphs: [
-      "Hi I'm Hi, Afeez Tomisin (Akinwunmi) — a Product Designer and Backend Developer passionate about creating meaningful digital experiences, solving problems and building the systems behind them.",
+      "Hi, Afeez Tomisin (Akinwunmi) — a Product Designer and Backend Developer passionate about creating meaningful digital experiences, solving problems and building the systems behind them.",
       "My interest in technology grew from seeing how everyday inventions, even something as simple as a bicycle, are created to solve problems. That curiosity eventually led me into tech, where I combine design and engineering using Figma, JavaScript, Node.js, Express and MongoDB to bring ideas to life.",
       "Outside work, I enjoy listening to music, reading, exploring fashion and personal styling, and keeping up with the ever-evolving world of technology. I'm always eager to discover new ideas, learn new things and find inspiration in the world around me."
     ],
@@ -57,7 +57,7 @@ export const PORTFOLIO_DATA = {
       ],
       techStack: ["Figma", "UI/UX Research", "Next.js", "Tailwind CSS", "Framer Motion"],
       liveUrl: "https://example.com/various",
-      githubUrl: "https://github.com"
+      githubUrl: "https://github.com/Banx17"
     },
     {
       id: "kizzy-mobile",
@@ -75,7 +75,7 @@ export const PORTFOLIO_DATA = {
       ],
       techStack: ["Figma", "Mobile UI Design", "Prototyping", "Design System"],
       liveUrl: "https://example.com/kizzy",
-      githubUrl: "https://github.com"
+      githubUrl: "https://github.com/Banx17"
     },
     {
       id: "nim-games",
@@ -93,7 +93,7 @@ export const PORTFOLIO_DATA = {
       ],
       techStack: ["UI/UX Design", "Figma", "Web3 UX", "React"],
       liveUrl: "https://example.com/nim",
-      githubUrl: "https://github.com"
+      githubUrl: "https://github.com/Banx17"
     },
     {
       id: "backend-apis",
@@ -109,9 +109,77 @@ export const PORTFOLIO_DATA = {
         "Automated Docker containerization and orchestrated cloud deployment",
         "Comprehensive test suite with unit, integration, and load testing"
       ],
-      techStack: ["Node.js", "Go", "PostgreSQL", "Docker", "Redis", "REST / gRPC"],
+      techStack: ["Node.js", "Express", "MongoDB", "Redis", "REST / APIs"],
       liveUrl: "https://example.com/backend-api-docs",
-      githubUrl: "https://github.com"
+      githubUrl: "https://github.com/Banx17"
+    },
+    {
+      id: "teamwork",
+      title: "Enable Efficient Teamwork",
+      category: "Design",
+      tag: "Web Platform",
+      description: "Create a culture of clarity, creativity, and connection across every project.",
+      longDescription: "A comprehensive collaboration platform design featuring high-contrast dark mode aesthetics, warm radial gradients, and partner ecosystem integrations.",
+      image: "/images/showcase-1-teamwork.jpg",
+      highlights: [
+        "Custom radiant sun gradient background and typography system",
+        "Seamless real-time collaboration workflows and handoff pipelines",
+        "Partner integrations with PayPal, NVIDIA, Lafarge, Dangote, and Access"
+      ],
+      techStack: ["Figma", "UI/UX Design", "Design System"],
+      liveUrl: "https://example.com/teamwork",
+      githubUrl: "https://github.com/Banx17"
+    },
+    {
+      id: "ai-pilot",
+      title: "Your AI Pilot for Online Products",
+      category: "Design",
+      tag: "AI SaaS",
+      description: "Kortex is the all-in-one AI workspace to research, create, and grow automatically.",
+      longDescription: "Modern AI workspace landing page and application architecture designed for founders and creators scaling online products.",
+      image: "/images/showcase-2-aipilot.jpg",
+      highlights: [
+        "Futuristic 3D robotics asset rendering and minimal dark/light interface",
+        "Conversion-optimized CTA pathways with demo booking flows",
+        "Integrated agent workflow indicators and status monitors"
+      ],
+      techStack: ["Figma", "Next.js", "Tailwind CSS", "Framer Motion"],
+      liveUrl: "https://example.com/aipilot",
+      githubUrl: "https://github.com/Banx17"
+    },
+    {
+      id: "music-app",
+      title: "Music Streaming App Redesign",
+      category: "Design",
+      tag: "Mobile App",
+      description: "Immersive mobile music experience with dynamic player and artist profiling.",
+      longDescription: "An end-to-end mobile design concept exploring vibrant color palettes, immersive full-screen media players, and personalized music discovery mixes.",
+      image: "/images/showcase-3-music.jpg",
+      highlights: [
+        "Fluid audio player transitions with custom album art glow",
+        "Adaptive artist profiles featuring Travis Scott, Rihanna, and African sounds",
+        "Streamlined playlist management and social sharing micro-interactions"
+      ],
+      techStack: ["Figma", "Mobile UI Design", "iOS Design Guidelines"],
+      liveUrl: "https://example.com/music-app",
+      githubUrl: "https://github.com/Banx17"
+    },
+    {
+      id: "ximx-crypto",
+      title: "XiMX — Cryptocurrency Exchange",
+      category: "Design",
+      tag: "Fintech & Web3",
+      description: "Predict market changes and algorithmic signals to buy and sell digital assets.",
+      longDescription: "A high-performance crypto exchange trading interface focused on predictive signals, real-time market data, and multi-asset wallet integration.",
+      image: "/images/showcase-4-ximx.jpg",
+      highlights: [
+        "Real-time candlestick and algorithmic wave price forecasting charts",
+        "Instant market swap interface for Bitcoin, Ethereum, Solana, and Monad",
+        "High-contrast dark mode theme optimized for long trading sessions"
+      ],
+      techStack: ["Figma", "UI/UX", "Crypto Trading UX", "Web3"],
+      liveUrl: "https://example.com/ximx",
+      githubUrl: "https://github.com/Banx17"
     }
   ] as Project[],
   services: [
@@ -141,14 +209,14 @@ export const PORTFOLIO_DATA = {
       title: "API & Microservices",
       description: "Designing and implementing scalable RESTful and gRPC APIs engineered for high reliability and throughput.",
       iconName: "Cpu",
-      skills: ["RESTful APIs", "gRPC", "Authentication & JWT", "Service Mesh"]
+      skills: ["RESTful APIs", "Express", "Node.js", "Authentication & JWT"]
     },
     {
       id: "database-design",
       title: "Database Design & Management",
-      description: "Architecting normalized SQL schemas, indexing strategies, and NoSQL data stores optimized for fast querying.",
+      description: "Architecting database schemas, indexing strategies, and data stores optimized for fast querying.",
       iconName: "Database",
-      skills: ["PostgreSQL", "MongoDB", "Redis", "Schema Migrations & Indexing"]
+      skills: ["MongoDB", "PostgreSQL", "Redis", "Schema Modeling"]
     },
     {
       id: "performance-integration",
@@ -159,4 +227,3 @@ export const PORTFOLIO_DATA = {
     }
   ] as Service[]
 };
-

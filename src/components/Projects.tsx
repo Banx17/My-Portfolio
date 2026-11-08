@@ -14,7 +14,11 @@ interface ProjectsProps {
 export default function Projects({ projects, onSelectProject }: ProjectsProps) {
   const [activeTab, setActiveTab] = useState<"All" | "Design" | "Backend Development">("All");
 
-  const filteredProjects = projects.filter((project) => {
+  const curatedProjects = projects.filter((p) =>
+    ["various-project", "kizzy-mobile", "nim-games", "backend-apis"].includes(p.id)
+  );
+
+  const filteredProjects = curatedProjects.filter((project) => {
     if (activeTab === "All") return true;
     return project.category === activeTab;
   });
