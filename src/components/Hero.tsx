@@ -115,6 +115,7 @@ export default function Hero({ onOpenContact, onSelectProject }: HeroProps) {
                     className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 256px, 288px"
                     priority
+                    quality={85}
                   />
                 </motion.div>
               </AnimatePresence>

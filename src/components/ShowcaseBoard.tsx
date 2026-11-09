@@ -92,8 +92,10 @@ export default function ShowcaseBoard({
                 src={item.image}
                 alt={item.title}
                 fill
+                quality={75}
+                loading={index < 2 ? "eager" : "lazy"}
                 className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 360px, 480px"
+                sizes="(max-width: 640px) 300px, (max-width: 1024px) 420px, 480px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-60" />
 
