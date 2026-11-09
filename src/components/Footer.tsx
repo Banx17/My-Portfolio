@@ -132,7 +132,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
           <p>© 2026 Afeez Tomisin. All rights reserved.</p>
           <p className="flex items-center gap-1">
-            <span>Designed &amp; Built with precision.</span>
+            <span>Designed &amp; Built by Afeez Tomisin.</span>
           </p>
         </div>
       </div>

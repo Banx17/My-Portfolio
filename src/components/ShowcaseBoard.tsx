@@ -84,10 +84,10 @@ export default function ShowcaseBoard({
                 // If user wants to open modal, they can, but opening link directly gives instant Behance access
               }
             }}
-            className="w-[360px] sm:w-[440px] md:w-[480px] shrink-0 rounded-2xl border border-neutral-800/80 bg-[#121212] overflow-hidden flex flex-col justify-between group hover:border-neutral-500 transition-all duration-300 hover:shadow-2xl hover:shadow-black/80 cursor-pointer"
+            className="w-[300px] sm:w-[420px] md:w-[480px] shrink-0 rounded-2xl border border-neutral-800/80 bg-[#121212] overflow-hidden flex flex-col justify-between group hover:border-neutral-500 transition-all duration-300 hover:shadow-2xl hover:shadow-black/80 cursor-pointer"
           >
             {/* Visual Screen Container (aspect ~ 3:2 to fit the 3768x2512 designs) */}
-            <div className="relative h-[230px] sm:h-[260px] md:h-[280px] w-full overflow-hidden bg-neutral-950">
+            <div className="relative h-[200px] sm:h-[260px] md:h-[280px] w-full overflow-hidden bg-neutral-950">
               <Image
                 src={item.image}
                 alt={item.title}

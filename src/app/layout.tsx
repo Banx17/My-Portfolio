@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -11,6 +11,13 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#080808",
+};
 
 export const metadata: Metadata = {
   title: "Afeez | Product Designer & Backend Engineer",
@@ -42,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`}>
-      <body className="min-h-screen bg-[#080808] text-neutral-100 font-sans selection:bg-neutral-800 selection:text-white">
+      <body className="min-h-screen bg-[#080808] text-neutral-100 font-sans selection:bg-neutral-800 selection:text-white antialiased overflow-x-hidden">
         {children}
       </body>
     </html>
