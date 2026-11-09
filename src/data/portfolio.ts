@@ -10,6 +10,7 @@ export interface Project {
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
+  figmaUrl?: string;
 }
 
 export interface Service {
@@ -56,7 +57,7 @@ export const PORTFOLIO_DATA = {
         "Performance-optimized SVG graphics and micro-interactions"
       ],
       techStack: ["Figma", "UI/UX Research", "Next.js", "Tailwind CSS", "Framer Motion"],
-      liveUrl: "https://example.com/various",
+      liveUrl: "https://www.behance.net/gallery/248900855/Various-Projects",
       githubUrl: "https://github.com/Banx17"
     },
     {
@@ -74,13 +75,13 @@ export const PORTFOLIO_DATA = {
         "Biometric authorization and transaction security guardrails"
       ],
       techStack: ["Figma", "Mobile UI Design", "Prototyping", "Design System"],
-      liveUrl: "https://example.com/kizzy",
+      liveUrl: "https://www.behance.net/gallery/240858761/KIZZY-MOBILE-REDESIGN-CASE-STUDY",
       githubUrl: "https://github.com/Banx17"
     },
     {
       id: "nim-games",
       title: "Nim Games",
-      category: "Design",
+      category: "Backend Development",
       tag: "Full Stack",
       description: "Gamified NFT platform and community reward ecosystem with vibrant collectible cards and interactive quests.",
       longDescription: "A playful yet high-utility Web3 gaming marketplace. Blends arcade-style visuals with Web3 wallet connection, NFT staking, and reward claiming leaderboards.",
@@ -92,7 +93,8 @@ export const PORTFOLIO_DATA = {
         "Integrated multi-chain wallet connecting flow"
       ],
       techStack: ["UI/UX Design", "Figma", "Web3 UX", "React"],
-      liveUrl: "https://example.com/nim",
+      liveUrl: "https://nim-games.vercel.app/",
+      figmaUrl: "https://www.figma.com/design/43sY6kIkWcgOlOjDW0EZ3l/NIMGAMES?node-id=0-1&t=z0nAZbL1oYjtkaE1-1",
       githubUrl: "https://github.com/Banx17"
     },
     {
@@ -110,7 +112,6 @@ export const PORTFOLIO_DATA = {
         "Comprehensive test suite with unit, integration, and load testing"
       ],
       techStack: ["Node.js", "Express", "MongoDB", "Redis", "REST / APIs"],
-      liveUrl: "https://example.com/backend-api-docs",
       githubUrl: "https://github.com/Banx17"
     },
     {

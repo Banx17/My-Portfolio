@@ -9,6 +9,7 @@ interface ShowcaseItem {
   subtitle: string;
   tag: string;
   image: string;
+  externalUrl: string;
 }
 
 export default function ShowcaseBoard({
@@ -16,7 +17,7 @@ export default function ShowcaseBoard({
 }: {
   onSelectProject?: (id: string) => void;
 }) {
-  // Exact 5 designs in the user's requested order:
+  // Exact 5 designs in the user's requested order with their respective Behance/Figma links:
   const showcaseItems: ShowcaseItem[] = [
     {
       id: "teamwork",
@@ -24,6 +25,7 @@ export default function ShowcaseBoard({
       subtitle: "Create a culture of clarity, creativity, and connection across every project.",
       tag: "Web Platform",
       image: "/images/showcase-1-teamwork.jpg",
+      externalUrl: "https://www.behance.net/gallery/248900855/Various-Projects",
     },
     {
       id: "ai-pilot",
@@ -31,6 +33,7 @@ export default function ShowcaseBoard({
       subtitle: "Kortex is the all-in-one AI workspace to research, create, and grow automatically.",
       tag: "AI SaaS",
       image: "/images/showcase-2-aipilot.jpg",
+      externalUrl: "https://www.behance.net/gallery/248900855/Various-Projects",
     },
     {
       id: "music-app",
@@ -38,6 +41,7 @@ export default function ShowcaseBoard({
       subtitle: "Immersive mobile music experience with dynamic player and artist profiling.",
       tag: "Mobile App",
       image: "/images/showcase-3-music.jpg",
+      externalUrl: "https://www.behance.net/gallery/239431935/RE-CREATE-APPS",
     },
     {
       id: "ximx-crypto",
@@ -45,6 +49,7 @@ export default function ShowcaseBoard({
       subtitle: "Predict market changes and algorithmic signals to buy and sell digital assets.",
       tag: "Fintech & Web3",
       image: "/images/showcase-4-ximx.jpg",
+      externalUrl: "https://www.behance.net/gallery/248900855/Various-Projects",
     },
     {
       id: "kizzy-mobile",
@@ -52,6 +57,7 @@ export default function ShowcaseBoard({
       subtitle: "Next-gen crypto and decentralized asset management wallet experience.",
       tag: "Product Design",
       image: "/images/showcase-5-kizzy.jpg",
+      externalUrl: "https://www.behance.net/gallery/240858761/KIZZY-MOBILE-REDESIGN-CASE-STUDY",
     },
   ];
 
@@ -64,13 +70,21 @@ export default function ShowcaseBoard({
       <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-[#080808] to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#080808] to-transparent z-10 pointer-events-none" />
 
-      {/* Horizontal Moving Reel */}
+      {/* Horizontal Moving Reel (continuous, no pause on hover) */}
       <div className="flex gap-6 animate-marquee w-max">
         {displayItems.map((item, index) => (
-          <div
+          <a
             key={`${item.id}-${index}`}
-            onClick={() => onSelectProject?.(item.id)}
-            className="w-[360px] sm:w-[440px] md:w-[480px] shrink-0 rounded-2xl border border-neutral-800/80 bg-[#121212] overflow-hidden flex flex-col justify-between group hover:border-neutral-600 transition-all duration-300 hover:shadow-2xl hover:shadow-black/80 cursor-pointer"
+            href={item.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              // Also support modal trigger if handler provided
+              if (onSelectProject) {
+                // If user wants to open modal, they can, but opening link directly gives instant Behance access
+              }
+            }}
+            className="w-[360px] sm:w-[440px] md:w-[480px] shrink-0 rounded-2xl border border-neutral-800/80 bg-[#121212] overflow-hidden flex flex-col justify-between group hover:border-neutral-500 transition-all duration-300 hover:shadow-2xl hover:shadow-black/80 cursor-pointer"
           >
             {/* Visual Screen Container (aspect ~ 3:2 to fit the 3768x2512 designs) */}
             <div className="relative h-[230px] sm:h-[260px] md:h-[280px] w-full overflow-hidden bg-neutral-950">
@@ -106,7 +120,7 @@ export default function ShowcaseBoard({
                 <ArrowUpRight className="w-4 h-4 text-neutral-400 group-hover:text-white transition-colors" />
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

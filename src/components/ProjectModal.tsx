@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { X, ExternalLink, CheckCircle2 } from "lucide-react";
-import { GithubIcon } from "./BrandIcons";
+import { GithubIcon, FigmaIcon } from "./BrandIcons";
 import { Project } from "@/data/portfolio";
 
 interface ProjectModalProps {
@@ -91,7 +91,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
         {/* Footer Actions */}
         <div className="p-4 sm:p-5 border-t border-neutral-800 bg-neutral-900/60 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
@@ -99,8 +99,20 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 rel="noopener noreferrer"
                 className="px-4 py-2 rounded-full text-xs font-semibold bg-white text-black hover:bg-neutral-200 transition-colors flex items-center gap-1.5"
               >
-                <span>Live Preview</span>
+                <span>{project.liveUrl.includes("behance.net") ? "View on Behance" : "Live Preview"}</span>
                 <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+            {project.figmaUrl && (
+              <a
+                href={project.figmaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full text-xs font-semibold bg-[#2a1d36] text-[#c084fc] border border-[#a855f7]/40 hover:bg-[#3b2752] transition-colors flex items-center gap-1.5"
+              >
+                <FigmaIcon className="w-3.5 h-3.5" />
+                <span>Figma Design</span>
+                <ExternalLink className="w-3 h-3" />
               </a>
             )}
             {project.githubUrl && (

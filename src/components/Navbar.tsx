@@ -21,11 +21,11 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
   }, []);
 
   const navLinks = [
-    { label: "About", href: "#about" },
-    { label: "Work", href: "#work" },
-    { label: "Services", href: "#services" },
-    { label: "Resume", href: "#resume" },
-    { label: "Contact", href: "#contact" },
+    { label: "about", href: "#about" },
+    { label: "work", href: "#work" },
+    { label: "services", href: "#services" },
+    { label: "resume", href: "#resume" },
+    { label: "contact", href: "#contact" },
   ];
 
   return (
@@ -63,7 +63,7 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-wider text-neutral-400">
+        <nav className="hidden md:flex items-center gap-8 text-xs font-medium lowercase tracking-wider text-neutral-400">
           {navLinks.map((link) => (
             <a
               key={link.label}

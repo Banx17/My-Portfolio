@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowDownRight, RefreshCw } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ShowcaseBoard from "./ShowcaseBoard";
 
@@ -123,11 +123,7 @@ export default function Hero({ onOpenContact, onSelectProject }: HeroProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
 
               {/* Status footer pill */}
-              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-neutral-300 pointer-events-none">
-                <span className="bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-full border border-neutral-700/60 flex items-center gap-1.5 text-[11px]">
-                  <RefreshCw className="w-3 h-3 text-amber-400 animate-spin" style={{ animationDuration: "6s" }} />
-                  <span>{pfpImages[activePfp].label}</span>
-                </span>
+              <div className="absolute bottom-3 right-3 flex items-center justify-end text-xs text-neutral-300 pointer-events-none">
                 <span className="bg-emerald-950/80 text-emerald-400 border border-emerald-800/80 px-2.5 py-0.5 rounded-full text-[11px] font-medium">
                   Available
                 </span>

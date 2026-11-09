@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Sparkles, Server, Code2, RefreshCw } from "lucide-react";
+import { Sparkles, Server, Code2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function About() {
@@ -104,31 +104,23 @@ export default function About() {
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
 
-              {/* Bottom Caption Pill */}
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-neutral-300 pointer-events-none">
-                <span className="text-[11px] font-medium tracking-wide px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-neutral-700/80 text-neutral-200 flex items-center gap-1.5">
-                  <RefreshCw className="w-3 h-3 text-amber-400 animate-spin" style={{ animationDuration: "8s" }} />
-                  <span>{aboutPhotos[activePhoto].caption}</span>
-                </span>
-
-                {/* Dots indicator */}
-                <div className="flex items-center gap-1.5 pointer-events-auto">
-                  {aboutPhotos.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setActivePhoto(idx);
-                      }}
-                      className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-                        activePhoto === idx
-                          ? "w-4 bg-white"
-                          : "w-1.5 bg-neutral-600 hover:bg-neutral-400"
-                      }`}
-                      aria-label={`Go to photo ${idx + 1}`}
-                    />
-                  ))}
-                </div>
+              {/* Bottom Dots Indicator */}
+              <div className="absolute bottom-4 right-4 flex items-center gap-1.5 pointer-events-auto">
+                {aboutPhotos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setActivePhoto(idx);
+                    }}
+                    className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                      activePhoto === idx
+                        ? "w-4 bg-white"
+                        : "w-1.5 bg-neutral-600 hover:bg-neutral-400"
+                    }`}
+                    aria-label={`Go to photo ${idx + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
