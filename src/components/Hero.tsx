@@ -46,12 +46,7 @@ export default function Hero({ onOpenContact, onSelectProject }: HeroProps) {
         {/* Top Split: Intro Text on Left, Photo on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
           {/* Left Text */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-8 flex flex-col items-start"
-          >
+          <div className="lg:col-span-8 flex flex-col items-start">
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900/90 border border-neutral-800 text-neutral-300 text-xs font-medium mb-6 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -85,21 +80,16 @@ export default function Hero({ onOpenContact, onSelectProject }: HeroProps) {
                 Get In Touch
               </button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right: Portrait Image that takes turns alternating! */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="lg:col-span-4 flex justify-center lg:justify-end"
-          >
+          <div className="lg:col-span-4 flex justify-center lg:justify-end">
             <div
               onClick={() => setActivePfp((prev) => (prev === 0 ? 1 : 0))}
               title="Click to switch persona"
               className="relative w-64 h-72 sm:w-72 sm:h-80 rounded-2xl overflow-hidden border border-neutral-800/90 bg-neutral-900/60 shadow-2xl group cursor-pointer select-none"
             >
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={activePfp}
                   initial={{ opacity: 0, rotateY: 90, scale: 0.92 }}
@@ -130,7 +120,7 @@ export default function Hero({ onOpenContact, onSelectProject }: HeroProps) {
                 </span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

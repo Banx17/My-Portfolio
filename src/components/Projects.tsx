@@ -73,7 +73,7 @@ export default function Projects({ projects, onSelectProject }: ProjectsProps) {
 
         {/* Projects Grid */}
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <AnimatePresence>
+          <AnimatePresence initial={false}>
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}

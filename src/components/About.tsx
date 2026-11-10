@@ -82,7 +82,7 @@ export default function About() {
               title="Click to see next photo"
               className="relative w-full max-w-sm h-80 sm:h-96 rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 shadow-2xl group cursor-pointer select-none"
             >
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={activePhoto}
                   initial={{ opacity: 0, scale: 0.96 }}
