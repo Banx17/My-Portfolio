@@ -49,7 +49,6 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
               fill
               className="object-cover"
               sizes="40px"
-              priority
             />
           </div>
           <div className="flex flex-col">

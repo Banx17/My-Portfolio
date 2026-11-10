@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#080808] text-neutral-100 flex flex-col justify-between selection:bg-neutral-800 selection:text-white">
+    <div className="relative min-h-screen bg-[#080808] text-neutral-100 flex flex-col justify-between selection:bg-neutral-800 selection:text-white overflow-x-hidden">
       {/* Top Navbar */}
       <Navbar onOpenContact={() => setIsContactOpen(true)} />
 

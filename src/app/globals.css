@@ -17,7 +17,6 @@
     background-color: var(--background);
     color: var(--foreground);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    overflow-x: hidden;
   }
 
   /* Custom scrollbar */
@@ -39,9 +38,11 @@
 @keyframes marquee {
   0% {
     transform: translate3d(0%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
   }
   100% {
     transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -49,5 +50,6 @@
   display: flex;
   width: max-content;
   animation: marquee 25s linear infinite;
+  -webkit-animation: marquee 25s linear infinite;
   will-change: transform;
 }

@@ -92,10 +92,10 @@ export default function Hero({ onOpenContact, onSelectProject }: HeroProps) {
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={activePfp}
-                  initial={{ opacity: 0, rotateY: 90, scale: 0.92 }}
-                  animate={{ opacity: 1, rotateY: 0, scale: 1 }}
-                  exit={{ opacity: 0, rotateY: -90, scale: 0.92 }}
-                  transition={{ duration: 0.55, ease: "easeInOut" }}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.45, ease: "easeInOut" }}
                   className="relative w-full h-full"
                 >
                   <Image

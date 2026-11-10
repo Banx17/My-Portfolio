@@ -93,7 +93,7 @@ export default function ShowcaseBoard({
                 alt={item.title}
                 fill
                 quality={75}
-                loading={index < 2 ? "eager" : "lazy"}
+                loading="lazy"
                 className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 640px) 300px, (max-width: 1024px) 420px, 480px"
               />
