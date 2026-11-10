@@ -96,7 +96,7 @@ export default function About() {
                     alt={aboutPhotos[activePhoto].alt}
                     fill
                     loading="lazy"
-                    quality={80}
+                    quality={75}
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 400px"
                   />
