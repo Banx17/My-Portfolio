@@ -49,7 +49,7 @@ export const PORTFOLIO_DATA = {
       tag: "Website Design",
       description: "Interactive AI product platform with fluid animations, dynamic typography, and responsive bento architecture.",
       longDescription: "A comprehensive brand and website design for an AI-powered SaaS product. Designed with focus on dark mode aesthetics, glow effects, clear typographic hierarchy, and responsive fluid grids.",
-      image: "/images/proj-various.jpg",
+      image: "/images/proj-various.webp",
       highlights: [
         "Modern dark mode layout with custom radial glow gradients",
         "Interactive product demo states and conversion-focused CTAs",
@@ -67,7 +67,7 @@ export const PORTFOLIO_DATA = {
       tag: "Product Design",
       description: "Next-gen crypto and fintech mobile wallet app experience with seamless asset management and biometric security.",
       longDescription: "An end-to-end mobile design project addressing common UX friction points in decentralized finance. Designed with dark aesthetic, accessible contrast ratios, and clear multi-currency transaction flows.",
-      image: "/images/proj-kizzy.jpg",
+      image: "/images/proj-kizzy.webp",
       highlights: [
         "Comprehensive design system with over 80+ reusable Figma components",
         "Streamlined onboarding and instant asset swap user flows",
@@ -85,7 +85,7 @@ export const PORTFOLIO_DATA = {
       tag: "Full Stack",
       description: "Gamified NFT platform and community reward ecosystem with vibrant collectible cards and interactive quests.",
       longDescription: "A playful yet high-utility Web3 gaming marketplace. Blends arcade-style visuals with Web3 wallet connection, NFT staking, and reward claiming leaderboards.",
-      image: "/images/proj-nim.jpg",
+      image: "/images/proj-nim.webp",
       highlights: [
         "Playful illustration style aligned with high-conversion e-commerce flows",
         "Real-time quest tracking and leaderboard micro-interactions",
@@ -104,7 +104,7 @@ export const PORTFOLIO_DATA = {
       tag: "Backend",
       description: "High-throughput microservices architecture with Redis caching, resilient rate limiting, and third-party integrations.",
       longDescription: "A robust backend system built to support real-time user workloads. Features automated database migrations, distributed Redis caching, webhook listeners, and zero-downtime CI/CD deployment pipelines.",
-      image: "/images/proj-backend-apis.jpg",
+      image: "/images/proj-backend-apis.webp",
       highlights: [
         "Sub-30ms p95 latency on read-heavy public endpoints with Redis caching",
         "Token bucket rate limiting to prevent API abuse and DDoS attacks",

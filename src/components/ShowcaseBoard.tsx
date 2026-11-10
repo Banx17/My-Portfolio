@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
@@ -24,7 +22,7 @@ export default function ShowcaseBoard({
       title: "Enable Efficient Teamwork",
       subtitle: "Create a culture of clarity, creativity, and connection across every project.",
       tag: "Web Platform",
-      image: "/images/showcase-1-teamwork.jpg",
+      image: "/images/showcase-1-teamwork.webp",
       externalUrl: "https://www.behance.net/gallery/248900855/Various-Projects",
     },
     {
@@ -32,7 +30,7 @@ export default function ShowcaseBoard({
       title: "Your AI Pilot for Online Products",
       subtitle: "Kortex is the all-in-one AI workspace to research, create, and grow automatically.",
       tag: "AI SaaS",
-      image: "/images/showcase-2-aipilot.jpg",
+      image: "/images/showcase-2-aipilot.webp",
       externalUrl: "https://www.behance.net/gallery/248900855/Various-Projects",
     },
     {
@@ -40,7 +38,7 @@ export default function ShowcaseBoard({
       title: "Music Streaming App Redesign",
       subtitle: "Immersive mobile music experience with dynamic player and artist profiling.",
       tag: "Mobile App",
-      image: "/images/showcase-3-music.jpg",
+      image: "/images/showcase-3-music.webp",
       externalUrl: "https://www.behance.net/gallery/239431935/RE-CREATE-APPS",
     },
     {
@@ -48,7 +46,7 @@ export default function ShowcaseBoard({
       title: "XiMX — Cryptocurrency Exchange",
       subtitle: "Predict market changes and algorithmic signals to buy and sell digital assets.",
       tag: "Fintech & Web3",
-      image: "/images/showcase-4-ximx.jpg",
+      image: "/images/showcase-4-ximx.webp",
       externalUrl: "https://www.behance.net/gallery/248900855/Various-Projects",
     },
     {
@@ -56,7 +54,7 @@ export default function ShowcaseBoard({
       title: "Kizzy Mobile",
       subtitle: "Next-gen crypto and decentralized asset management wallet experience.",
       tag: "Product Design",
-      image: "/images/showcase-5-kizzy.jpg",
+      image: "/images/showcase-5-kizzy.webp",
       externalUrl: "https://www.behance.net/gallery/240858761/KIZZY-MOBILE-REDESIGN-CASE-STUDY",
     },
   ];

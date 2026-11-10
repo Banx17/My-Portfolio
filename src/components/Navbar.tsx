@@ -44,7 +44,7 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
         >
           <div className="relative w-10 h-10 rounded-full overflow-hidden border border-neutral-700 group-hover:border-neutral-400 transition-colors bg-neutral-900">
             <Image
-              src="/images/hero-afeez.jpg"
+              src="/images/hero-afeez.webp"
               alt="Afeez Tomisin"
               fill
               className="object-cover"

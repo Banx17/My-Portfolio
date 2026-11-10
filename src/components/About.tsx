@@ -10,17 +10,17 @@ export default function About() {
 
   const aboutPhotos = [
     {
-      src: "/images/about-photo-1.jpg",
+      src: "/images/about-photo-1.webp",
       alt: "Afeez Tomisin - Curiosity & Engineering",
       caption: "Curiosity & Engineering",
     },
     {
-      src: "/images/about-photo-2.jpg",
+      src: "/images/about-photo-2.webp",
       alt: "Afeez Tomisin - Style & Technology",
       caption: "Style & Technology",
     },
     {
-      src: "/images/about-photo-3.jpg",
+      src: "/images/about-photo-3.webp",
       alt: "Afeez Tomisin - Focus & Leisure",
       caption: "Focus & Leisure",
     },

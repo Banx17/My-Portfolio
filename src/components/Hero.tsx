@@ -25,12 +25,12 @@ export default function Hero({ onOpenContact, onSelectProject }: HeroProps) {
 
   const pfpImages = [
     {
-      src: "/images/hero-pfp-real.jpg",
+      src: "/images/hero-pfp-real.webp",
       alt: "Afeez Tomisin",
       label: "In Person",
     },
     {
-      src: "/images/hero-pfp-avatar.jpg",
+      src: "/images/hero-pfp-avatar.webp",
       alt: "Afeez Tomisin Cartoon Persona",
       label: "Persona",
     },
